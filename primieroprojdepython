@@ -1,0 +1,71 @@
+# Olá! Eu sou o Felipe Silva Avelino 😄
+
+## Sobre mim:
+
+Sou um estudante de História, pós-graduado nessa área, e atualmente estou em transição profissional. Tenho 39 anos e moro na cidade de São Paulo.
+
+Gosto muito de aprender novas habilidades e tecnologias, e estou me dedicando a aprimorar meus conhecimentos em programação.
+
+### Projetos:
+
+#### Projeto 1 - Calculadora Simples
+
+Uma calculadora simples em Python que realiza operações de adição, subtração, multiplicação e divisão.
+
+```python
+def adicao(a, b):
+    return a + b
+
+def subtracao(a, b):
+    return a - b
+
+def multiplicacao(a, b):
+    return a * b
+
+def divisao(a, b):
+    if b != 0:
+        return a / b
+    else:
+        return "Erro: Divisão por zero não é permitida."
+
+print("Calculadora Simples")
+print("Operações disponíveis:")
+print("1 - Adição")
+print("2 - Subtração")
+print("3 - Multiplicação")
+print("4 - Divisão")
+
+opcao = int(input("Escolha a operação (1/2/3/4): "))
+
+if opcao in (1, 2, 3, 4):
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+
+    if opcao == 1:
+        resultado = adicao(num1, num2)
+    elif opcao == 2:
+        resultado = subtracao(num1, num2)
+    elif opcao == 3:
+        resultado = multiplicacao(num1, num2)
+    else:
+        resultado = divisao(num1, num2)
+
+    print("Resultado:", resultado)
+else:
+    print("Opção inválida. Por favor, escolha uma operação válida (1/2/3/4).")
+
+import pandas as pd
+
+# Carregar os dados
+dados = pd.read_csv('dados.csv')
+
+# Visualizar as primeiras linhas do conjunto de dados
+print(dados.head())
+
+# Realizar algumas análises básicas
+media_idade = dados['idade'].mean()
+total_registros = len(dados)
+
+print("Média de idade:", media_idade)
+print("Total de registros:", total_registros)
+
